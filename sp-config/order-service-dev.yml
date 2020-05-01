@@ -1,30 +1,24 @@
 spring:
-  application:    name: order-service
+  application: 
+    name: order-service
   cloud:
     config:
       override-none: false
   rabbitmq:
-      host: 192.168.159.131
-      port: 5672
-      username: admin
-      password: admin
-eureka:
-  client:
-    service-url:
-      defaultZone: http://eureka1:2001/eureka, http://eureka2:2002/eureka
-      
-feign:
-  hystrix:
-    enabled: true
-    
-management:
-  endpoints:
-    web:
-      exposure:
-        include: hystrix.stream
+    host: 192.168.159.131
+    port: 5672
+    username: admin
+    password: admin  
+
+eureka: 
+  client: 
+    service-url: 
+      defaultZone: http://eureka1:2001/eureka,http://eureka2:2002/eureka
 ---
-spring:  profiles: order1
-server:   port: 8201
+spring:
+  profiles: order1
+server: 
+  port: 8201
 ---
 spring:
   profiles: order2
