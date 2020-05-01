@@ -1,26 +1,26 @@
-spring:
+spring: 
   application: 
     name: order-service
-  cloud:
-    config:
+  cloud: 
+    config: 
       override-none: false
-  rabbitmq:
+  rabbitmq: 
     host: 192.168.159.131
     port: 5672
     username: admin
-    password: admin  
+    password: admin
 
 eureka: 
   client: 
     service-url: 
       defaultZone: http://eureka1:2001/eureka,http://eureka2:2002/eureka
 ---
-spring:
+spring: 
   profiles: order1
 server: 
   port: 8201
 ---
-spring:
+spring: 
   profiles: order2
 server: 
   port: 8202
