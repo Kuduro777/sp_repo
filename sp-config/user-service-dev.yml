@@ -7,7 +7,12 @@ spring:
     name: user-service
   cloud:
     config:
-      override-none: false 
+      override-none: false
+  rabbitmq:
+      host: 192.168.159.131
+      port: 5672
+      username: admin
+      password: admin
 server:
   port: 8101
   
